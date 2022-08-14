@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     #localapss
     'initial',
+    'places',
 ]
 
 MIDDLEWARE = [
