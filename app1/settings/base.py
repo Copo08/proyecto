@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #localapss
     'initial',
     'places',
+    'persona',
 ]
 
 MIDDLEWARE = [
