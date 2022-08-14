@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    #localapss
+    'initial',
+    'places',
+    'persona',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +80,12 @@ WSGI_APPLICATION = 'app1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbv7gvl01r4qc2',
+        'USER': 'lwcyoyzxlwbiae',
+        'HOST':'ec2-34-230-153-41.compute-1.amazonaws.com',
+        'PASSWORD':'a270274be08508a7b17beda2f14177398884fded33fb0964949409bb01e066ca',
+        'PORT':5432
     }
 }
 
@@ -121,3 +130,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK ={
+    'DEFAULT_RENDERER_CLASSES':[
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}
