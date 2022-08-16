@@ -11,14 +11,27 @@ class ComentSerializer(serializers.ModelSerializer):
             'created',
         )
 
-    def to_representatio(self,instance):
+    def to_representatio(self, instance):
         return{
-            'id':instance.id,
+            'id': instance.id,
             'place':{
-                'id':instance.place.id,
-                'name':instance.place.name
+                'id': instance.place.id,
+                'name': instance.place.name
                 },
             'coment':instance.coment,
             'created':instance.created
 
         }
+
+class ComentPlaceListSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Coment
+        fields = (
+            'id',
+            'coment',
+            'created',
+                
+
+
+        )
