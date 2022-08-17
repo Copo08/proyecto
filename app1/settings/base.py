@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'places',
     'persona',
     'coments',
+    'users',
 ]
 
 MIDDLEWARE = [

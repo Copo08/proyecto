@@ -9,4 +9,4 @@ class Coment(models.Model):
     class Meta:
         db_table='coments'
     def __str__(self):
-        return self.comment
+        return self.coment
